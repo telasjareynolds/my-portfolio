@@ -12,6 +12,10 @@
     />
     <link rel="stylesheet" href="style.css" />
     <title>Telasja's Portfolio</title>
+    <script
+      src="https://kit.fontawesome.com/54a148a2b4.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body style="background-color: black">
@@ -43,9 +47,36 @@
               Contact Me
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <a
+                  class="fa-brands fa-linkedin"
+                  href="www.linkedin.com/in/telasjareynolds"
+                >
+                  Linkedin</a
+                >
+              </li>
+              <li>
+                <a
+                  class="fa-brands fa-github"
+                  href="https://github.com/telasjareynolds"
+                >
+                  GitHub</a
+                >
+              </li>
+              <li>
+                <a
+                  class="fa-sharp fa-solid fa-envelope-circle-check"
+                  href="#"
+                  style="color: blue"
+                >
+                  Telasjareynolds@gmail.com
+                </a>
+              </li>
+              <li>
+                <a class="fa-solid fa-phone" href="#" style="color: blue">
+                  (419)699-0516</a
+                >
+              </li>
             </ul>
           </li>
         </ul>
@@ -84,13 +115,9 @@
             Skills
           </p>
           <p class="tab-links" onclick="opentab('education')">Education</p>
-          <a
-            href=""
-            target="blank"
-            class="tab-links"
-            onclick="opentab('library')"
-            >Explore My Library</a
-          >
+          <p class="tab-links" onclick="opentab('library')">
+            Explore My Library
+          </p>
         </div>
         <div class="tab-contents active-tab" id="skills">
           <ul style="color: white">
@@ -115,34 +142,48 @@
         <div class="tab-contents" id="library">
           <ul style="color: white">
             <li><span>Task Cards</span><br /></li>
-            <li><span>Project Portfolio</span><br /></li>
+            <li><span>Portfolio Project</span><br /></li>
             <li><span>Netflix Project</span><br /></li>
           </ul>
         </div>
-
-        <!-- Add project link here -->
       </div>
     </section>
-    <section class="work">
-      <h2>Recent Work</h2>
-      <article>
-        <div>
-          <h3>Real Estate Landing Page</h3>
-          <p>Key Realty Clone</p>
-          <strong>Sept 2022</strong>
-          <!--Add description-->
-          <ul>
-            <li>1st detail</li>
-            <li>2nd detail</li>
-          </ul>
-          <a href="" target="'black">GitHub Repo</a>
+
+    <!-- Add project link here -->
+    <div id="projects">
+      <div class="container">
+        <h1 class="subt-title">Recent Work</h1>
+        <div class="projects-list">
+          <div>
+            <h2>Task Cards Project</h2>
+            <p>
+              Collaborated group project where classmates and I have
+              successfully worked as a team to build a functional site that
+              creates task cards.
+            </p>
+            <a href="#">See Project</a><br />
+            <a href="" target="black">GitHub Repo</a>
+          </div>
+          <div>
+            <h2>Portfolio Project</h2>
+            <p>
+              Created a portfolio using a collage of my favorite books as the
+              layout
+            </p>
+            <a href="#">See Project</a><br />
+            <a href="" target="black">GitHub Repo</a>
+          </div>
+          <div>
+            <h2>Netflix Project</h2>
+            <p>Created a clone of Netflix using HTML, CSS, and JavaScript</p>
+            <a href="#">See Project</a><br />
+            <a href="" target="black">GitHub Repo</a>
+          </div>
         </div>
-        <img
-          src="https://blog.leotheme.com/wp-content/uploads/2018/11/leo-real-estate-rtl-prestashop-theme.jpg"
-          class="key-realty"
-        />
-      </article>
-    </section>
+      </div>
+    </div>
+
+    <!---------JS----->
 
     <script>
       var tablinks = document.getElementsByClassName("tab-links");
@@ -190,4 +231,5 @@
       crossorigin="anonymous"
     />
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 </html>
