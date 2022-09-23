@@ -53,6 +53,9 @@ h2 {
 .bio {
   font-size: large;
   background-color: black;
+  z-index: 1;
+  display: flex;
+  position: ;
 }
 
 section {
