@@ -80,9 +80,44 @@
           enjoy reading, traveling, and binge watching educational videos.
         </p>
         <div class="tab-title">
-          <p class="tab-links">Skills</p>
-          <p class="tab-links">Education</p>
-          <a href="" target="blank" class="tab-links">Explore My Library</a>
+          <p class="tab-links active-link" onclick="opentab('skills')">
+            Skills
+          </p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+          <a
+            href=""
+            target="blank"
+            class="tab-links"
+            onclick="opentab('library')"
+            >Explore My Library</a
+          >
+        </div>
+        <div class="tab-contents active-tab" id="skills">
+          <ul style="color: white">
+            <li><span>JavaScript</span><br /></li>
+            <li><span>HTML</span><br /></li>
+            <li><span>CSS</span><br /></li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul style="color: white">
+            <li>
+              <span
+                ><strong>Green State University (08/2014-12/2019)</strong></span
+              ><br />Bacholers of Film Production/Spanish
+            </li>
+            <li>
+              <span><strong>USA Program(04/2022-09/2022)</strong></span
+              ><br />Web Developer
+            </li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="library">
+          <ul style="color: white">
+            <li><span>Task Cards</span><br /></li>
+            <li><span>Project Portfolio</span><br /></li>
+            <li><span>Netflix Project</span><br /></li>
+          </ul>
         </div>
 
         <!-- Add project link here -->
@@ -108,6 +143,22 @@
         />
       </article>
     </section>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
   </body>
 
   <!--Footer-->
@@ -139,7 +190,4 @@
       crossorigin="anonymous"
     />
   </footer>
-  <script>
-    https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js
-  </script>
 </html>
