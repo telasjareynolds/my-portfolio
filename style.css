@@ -321,7 +321,7 @@ form input, form textarea{
   background: bisque;
   padding: 15px;
   margin: 15px 0;
-  color: white;
+  color: black;
   font-size: 18px;
   border-radius: 6px;
 }
@@ -346,5 +346,18 @@ form .btnn{
 
 /*-------------------------------------css for small screens---------*/
 @media only screen and (max-width: 600px){
-  
+  .body{
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .headshot{
+    height: 100px;
+    width: 75%;
+  }
+}
+
+#msg{
+  color: #61b752;
+  margin-top: -50px;
+  display: block;
 }

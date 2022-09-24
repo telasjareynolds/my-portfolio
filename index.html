@@ -28,13 +28,15 @@
         </a>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#header"
+              >Home</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Resume</a>
+            <a class="nav-link" href="./assets/RESUME__TELASJA.pdf">Resume</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Project Library</a>
+            <a class="nav-link" href="#projects">Project Library</a>
           </li>
           <li class="nav-item dropdown">
             <a
@@ -86,7 +88,7 @@
     <!-- Body Section-->
     <!--Background Layout-->
 
-    <div class="grid" style="background-color: black">
+    <div id="header" class="grid" style="background-color: black">
       <div class="grid-item1"></div>
       <div class="grid-item2"></div>
       <div class="grid-item3"></div>
@@ -241,11 +243,11 @@
             >
           </div>
           <div class="contact-right">
-            <form>
+            <form name="submit-to-google-sheet">
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
-                name="email"
+                name="Email"
                 placeholder="Your Email"
                 required
               />
@@ -256,6 +258,7 @@
               ></textarea>
               <button type="submit" class="btnn">Submit</button>
             </form>
+            <span id="msg"></span>
           </div>
         </div>
       </div>
@@ -283,6 +286,25 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
       }
+    </script>
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbya1OCWfzfClaPsktk9ef0_4Id1Q-nD2snHemrhsbpwrPitCCZT7qnyIorZJjUoE70NIQ/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
     </script>
   </body>
 
