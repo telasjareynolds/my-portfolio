@@ -87,69 +87,74 @@
 
     <!-- Body Section-->
     <!--Background Layout-->
-
-    <div id="header" class="grid" style="background-color: black">
-      <div class="grid-item1"></div>
-      <div class="grid-item2"></div>
-      <div class="grid-item3"></div>
-      <div class="grid-item4"></div>
-      <div class="grid-item5"></div>
-      <div class="grid-item6"></div>
-      <div class="grid-item7"></div>
-      <div class="grid-item8"></div>
-    </div>
-    <section>
-      <img src="./Images/Headshot.jpg" class="headshot" />
-      <div>
-        <h2 style="color: bisque">
-          Hello! My name is Telasja Reynolds. I'm a Front-End Developer.
-        </h2>
-        <p class="bio" style="color: white">
-          I'm a graduate of Generation USA, a 350+ hour course. I recently
-          graduated from a coding bootcamp and have obtained a Certified
-          JavaScript Developer Certificate. During this bootcamp I've also
-          developed projects using CSS and HTML while learning the valuable soft
-          skills needed to work collaboratively on a team. In my free time I
-          enjoy reading, traveling, and binge watching educational videos.
-        </p>
-        <div class="tab-title">
-          <p class="tab-links active-link" onclick="opentab('skills')">
-            Skills
-          </p>
-          <p class="tab-links" onclick="opentab('education')">Education</p>
-          <p class="tab-links" onclick="opentab('library')">
-            Explore My Library
-          </p>
-        </div>
-        <div class="tab-contents active-tab" id="skills">
-          <ul style="color: white">
-            <li><span>JavaScript</span><br /></li>
-            <li><span>HTML</span><br /></li>
-            <li><span>CSS</span><br /></li>
-          </ul>
-        </div>
-        <div class="tab-contents" id="education">
-          <ul style="color: white">
-            <li>
-              <span
-                ><strong>Green State University (08/2014-12/2019)</strong></span
-              ><br />Bacholers of Film Production/Spanish
-            </li>
-            <li>
-              <span><strong>USA Program(04/2022-09/2022)</strong></span
-              ><br />Certified JavaScript Developer
-            </li>
-          </ul>
-        </div>
-        <div class="tab-contents" id="library">
-          <ul style="color: white">
-            <li><span>Task Cards</span><br /></li>
-            <li><span>Portfolio Project</span><br /></li>
-            <li><span>Netflix Project</span><br /></li>
-          </ul>
-        </div>
+    <div class="parent">
+      <div id="header" class="grid" style="background-color: black">
+        <div class="grid-item1"></div>
+        <div class="grid-item2"></div>
+        <div class="grid-item3"></div>
+        <div class="grid-item4"></div>
+        <div class="grid-item5"></div>
+        <div class="grid-item6"></div>
+        <div class="grid-item7"></div>
+        <div class="grid-item8"></div>
       </div>
-    </section>
+
+      <section>
+        <img src="./Images/Headshot.jpg" class="headshot" />
+        <div class="child">
+          <h2 style="color: bisque">
+            Hello! My name is Telasja Reynolds. I'm a Front-End Developer.
+          </h2>
+          <p class="bio" style="color: white">
+            I'm a graduate of Generation USA, a 350+ hour course. I recently
+            graduated from a coding bootcamp and have obtained a Certified
+            JavaScript Developer Certificate. During this bootcamp I've also
+            developed projects using CSS and HTML while learning the valuable
+            soft skills needed to work collaboratively on a team. In my free
+            time I enjoy reading, traveling, and binge watching educational
+            videos.
+          </p>
+          <div class="tab-title">
+            <p class="tab-links active-link" onclick="opentab('skills')">
+              Skills
+            </p>
+            <p class="tab-links" onclick="opentab('education')">Education</p>
+            <p class="tab-links" onclick="opentab('library')">
+              Explore My Library
+            </p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul style="color: white">
+              <li><span>JavaScript</span><br /></li>
+              <li><span>HTML</span><br /></li>
+              <li><span>CSS</span><br /></li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul style="color: white">
+              <li>
+                <span
+                  ><strong
+                    >Green State University (08/2014-12/2019)</strong
+                  ></span
+                ><br />Bacholers of Film Production/Spanish
+              </li>
+              <li>
+                <span><strong>USA Program(04/2022-09/2022)</strong></span
+                ><br />Certified JavaScript Developer
+              </li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="library">
+            <ul style="color: white">
+              <li><span>Task Cards</span><br /></li>
+              <li><span>Portfolio Project</span><br /></li>
+              <li><span>Netflix Project</span><br /></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <!-- Add project link here -->
     <div id="projects">

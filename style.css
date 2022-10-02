@@ -1,5 +1,5 @@
 body {
-  background: #080808;
+  background:;
   color:white;
   padding: 25px;
   font-family: fantasy;
@@ -43,25 +43,27 @@ h2 {
   align-self: center;
   font-family: fantasy;
   padding-top: 6rem;
+  background-color: transparent;
 }
 
 .headshot {
   width: 320px;
   margin-inline-end: 4rem;
   border-radius: 10px;
+  background-color: transparent;
 }
 
 .bio {
   font-size: large;
-  background-color: black;
   z-index: 1;
   display: flex;
-  position: ;
+  background-color: transparent;
 }
 
 section {
   position: relative;
   display: flex;
+  background-color: transparent;
 }
 
 .work {
@@ -361,3 +363,4 @@ form .btnn{
   margin-top: -50px;
   display: block;
 }
+
